@@ -17,19 +17,19 @@ function main(){
 	echo -e "------------------------------${ORANGE}Indian${WHITE} Cyber${GREEN} Heros${WHITE}-------------------------------"
 	echo -e "                    Kindly Read Note First by typing note                      "
 	echo -e "_______________________________________________________________________________"
-	echo -e "                   Installing Kali/Parrot linux on Server"
+	echo -e "                   在VPS上安装Kali或Parrot"
 	echo -e "           1. Yes"
 	echo -e ""
 	echo -e "           2. No"
 	COUNTER=0
 	while [  $COUNTER -lt 4 ]; do
-		read -p 'Input Your Choice: ' i
+		read -p '输入你的选择: ' i
 		if (($i == 1)); then 
-			echo "Select Appropriate Option :-"
+			echo "选择想要转换的系统 :-"
 			echo "1. Kali linux"
 			echo "2. Parrot"
 
-		    read -p 'Input Your Choice: ' i
+		    read -p '输入你的选择: ' i
 		    
 	    	if (($i == 1)); then
 			
@@ -44,11 +44,11 @@ function main(){
 				break
 
 		    else
-				echo -e "\nInvalid Choice! Try again."
+				echo -e "\n错误的选项，请重试."
 				break
 			fi
 		elif (($i == 2)); then 	
-				echo "Bye Bye!!! You have selected NO"
+				echo "再见！你什么都没选择。"
 				break
 		elif (($i == note)); then
 			echo -e "\n*****************************************************************"
