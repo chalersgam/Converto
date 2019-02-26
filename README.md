@@ -1,22 +1,20 @@
 [![SensioLabs Insight](https://img.shields.io/badge/package%20v1.0-Complete-brightgreen.svg)](https://github.com/developerkunal/Converto/) [![SensioLabs Insight](https://img.shields.io/badge/package%20v2.0-complete-brightgreen.svg)](https://github.com/developerkunal/Converto/) [![SensioLabs Insight](https://img.shields.io/badge/Licence-GNU%20General%20Public%20License-brightgreen.svg)](https://github.com/developerkunal/Converto/blob/master/LICENSE)<div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/992F16A0FCE7242292969EA30ED11873'><img src='https://img.shields.io/badge/Donation-Payumoney-green.svg' /></a></div> 
 # Converto V2
-### Automated Kali Linux or Parrot OS Installer for VPS
-                     ### Installing Kali linux or Parrot OS on VPS Server.###
+### 在VPS上自动安装 Kali Linux 或 Parrot OS
+                     ### 在VPS上自动安装 Kali Linux 或 Parrot OS###
                                 ###     Tested on Ubuntu.   ###
                                 ###     Tested on Debian.   ###
-                  ###   It also installs VNC (Graphical / Non-Graphical VNC).   ###
+                  ###  它也能安装 VNC (图形化界面/非图形化界面).   ###
 
-# Steps For Installing :-
+# 安装步骤 :-
 
-  Video :- How to install 
-  
-  [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/fZkJ0VF21j0/0.jpg)](https://www.youtube.com/watch?v=fZkJ0VF21j0)
+
 
 1.sudo apt-get update
 
 2.sudo apt-get install git
 
-3.git clone https://github.com/developerkunal/Converto.git
+3.git clone https://github.com/chalersgam/Converto.git
 
 4.cd Converto.
 

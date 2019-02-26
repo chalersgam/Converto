@@ -13,9 +13,7 @@ function main(){
 	echo -e "	 ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ "
 	echo -e "                             ${RED}   (Version - 2.O)                                "
 	printf "${WHITE}"
-	echo -e "----------------Contributers :- Kunal dawar && Ayush Sahay---------------------"
-	echo -e "------------------------------${ORANGE}Indian${WHITE} Cyber${GREEN} Heros${WHITE}-------------------------------"
-	echo -e "                    Kindly Read Note First by typing note                      "
+	echo -e "----------------核心脚本作者:- Kunal dawar && Ayush Sahay---------------------"
 	echo -e "_______________________________________________________________________________"
 	echo -e "                   在VPS上安装Kali或Parrot"
 	echo -e "           1. Yes"
@@ -25,7 +23,7 @@ function main(){
 	while [  $COUNTER -lt 4 ]; do
 		read -p '输入你的选择: ' i
 		if (($i == 1)); then 
-			echo "选择想要转换的系统 :-"
+			echo "选择想要安装的系统 :-"
 			echo "1. Kali linux"
 			echo "2. Parrot"
 
@@ -52,12 +50,12 @@ function main(){
 				break
 		elif (($i == note)); then
 			echo -e "\n*****************************************************************"
-			echo "1. Kali Linux is working on Both Ubuntu and debian Server System"
-			echo "2. Parrot OS is only Working on Ubuntu Server System"
-			echo "3. There is Only Option of RDP in Ubuntu Server System"
+			echo "1. Kali Linux 支持在Ubuntu和Debian系统上安装"
+			echo "2. Parrot OS 只支持Ubuntu系统"
+			echo "3. Ubuntu系统只支持RDP选项（关于图形化界面的安装）"
 			echo "*******************************************************************"
 		else
-			echo -e "\n\nInvalid Seletion!!!  $((3-$COUNTER)) chances left.."
+			echo -e "\n\n错误的选项!!!  $((3-$COUNTER)) chances left.."
 		fi
 		let COUNTER=COUNTER+1
 done
@@ -65,5 +63,5 @@ done
 if [ `whoami` == "root" ]; then
 	main
 else
-	echo "This script needs to be run as root!!!"
+	echo "这个脚本必须以root权限运行!!!"
 fi

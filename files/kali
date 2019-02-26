@@ -8,40 +8,39 @@ show_menu_kali(){
     RED_TEXT=`echo "\033[31m"`
     ENTER_LINE=`echo "\033[33m"`
     echo -e "${MENU}**********************************************************${NORMAL}"
-    echo -e "-------------Welcome to Kali Linux OS Installer--------------"
-    echo -e "\t\tConverto V2.O"
-    echo -e "${MENU}**${NUMBER} 1)${MENU} Install Kali Linux base system ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 2)${MENU} Install Kali Linux - all packages ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 3)${MENU} Install Kali Linux forensic tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 4)${MENU} Install Kali Linux complete system ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 5)${MENU} Install Kali Linux GPU tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 6)${MENU} Install Kali Linux Nethunter tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 7)${MENU} Install Kali Linux password cracking tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 8)${MENU} Install Kali Linux RFID tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 9)${MENU} Install Kali Linux SDR tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 10)${MENU}Install Kali Linux Top 10 tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 11)${MENU}Install Kali Linux VoIP tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 12)${MENU}Install Kali Linux webapp assessment tools ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 13)${MENU}Install Kali Linux wireless tools ${NORMAL}"
+    echo -e "-------------Kali Linux OS 安装--------------"
+    echo -e "\t\tConverto V2.0"
+    echo -e "${MENU}**${NUMBER} 1)${MENU} 安装 Kali Linux 基础系统 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 2)${MENU} 安装 Kali Linux 所有包 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 3)${MENU} 安装 Kali Linux 取证工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 4)${MENU} 安装 Kali Linux 完整系统 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 5)${MENU} 安装 Kali Linux GPU工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 6)${MENU} 安装 Kali Linux Nethunter工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 7)${MENU} 安装 Kali Linux 密码破解工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 8)${MENU} 安装 Kali Linux 射频识别工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 9)${MENU} 安装 Kali Linux 无线电工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 10)${MENU}安装 Kali Linux Top 10 工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 11)${MENU}安装 Kali Linux VoIP 工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 12)${MENU}安装 Kali Linux Web应用程序评估工具 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 13)${MENU}安装 Kali Linux 无线工具 ${NORMAL}"
     echo -e "${MENU}*********************************************************${NORMAL}"
 	COUNTER=0
     while [  $COUNTER -lt 4 ]; do
 
-	    echo -e "\n${ENTER_LINE}Please enter a menu option and enter or ${RED_TEXT}enter to exit. ${NORMAL}"
-	    read -p 'Input Your Choice: ' i
+	    echo -e "\n${ENTER_LINE}请输入菜单中的选项或者 ${RED_TEXT}enter to exit. ${NORMAL}"
+	    read -p '输入你的选择: ' i
 	    if (($i <= 13 )) && (( $i >= 1 )); then 
-	    	install $i
+	    	安装 $i
 	    	break
 	    else
-	    	echo -e "\nInvalid Choice! Try again. $((3-$COUNTER)) chances left..)"
+	    	echo -e "\n错误的选项，请重试. $((3-$COUNTER)) chances left..)"
 
 	    fi
 	    let COUNTER=COUNTER+1 
 	done
 }
 function include(){
-	echo -e "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
-	apt-get install kali-archive-keyring --allow-unauthenticated -y
+	echo -e "deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
 	apt-get update && apt-get upgrade --allow-unauthenticated -y && apt-get dist-upgrade -y  --allow-unauthenticated
 }
 
@@ -52,7 +51,7 @@ function install(){
 	apt-get -f install -y  --allow-unauthenticated
 	apt-get install linux-headers-4.14.0-kali3-amd64 -y -y
     clear
-	echo -e "\n\n Installation Completed Successfully!!!"
+	echo -e "\n\n 安装成功!!!"
     chmod +x ./files/vnc
     ./files/vnc
     break
