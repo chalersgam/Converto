@@ -1,11 +1,11 @@
 #!/bin/bash
 	apt-get update && sudo apt-get upgrade
-	echo -e "\nDo you want to install RDP?"
-	echo -e "\n1. Yes, Install RDP (Graphical)"
-	echo "2. No, Do not install RDP"
+	echo -e "\n你想安装 RDP?"
+	echo -e "\n1. 是的安装 RDP (图形化)"
+	echo "2. 不，不安装 RDP"
 	COUNTER=0
 	while [  $COUNTER -lt 4 ]; do
-		read -p 'Input Your Choice: ' i
+		read -p '输入你的选择: ' i
 		if (($i == 1)); then 
 			apt-get update
 			apt-get install xrdp -y
@@ -17,13 +17,13 @@
 				xrdb $HOME/.Xresources
 				startxfce4 &" >> ~/.xsession
 			/etc/init.d/xrdp start
-			echo -e "\nRDP Successfully Installed!!! \n\nRDP Started!!!"
+			echo -e "\nRDP 成功安装 \n\nRDP 开启!!!"
 			break
 		elif (($i == 2)); then
-			echo -e "You Have Selected No!!!"
+			echo -e "最后祝你身体健康，再见！"
 			break
 		else
-			echo -e "\n\nInvalid Seletion!!!  $((3-$COUNTER)) chances left.."
+			echo -e "\n错误的选项，请重试. 错误$((3-$COUNTER)) 次后退出..)"
 		fi
 		let COUNTER=COUNTER+1
 done

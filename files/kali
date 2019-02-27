@@ -11,9 +11,9 @@ show_menu_kali(){
     echo -e "-------------Kali Linux OS 安装--------------"
     echo -e "\t\tConverto V2.0"
     echo -e "${MENU}**${NUMBER} 1)${MENU} 安装 Kali Linux 基础系统 ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 2)${MENU} 安装 Kali Linux 所有包 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 2)${MENU} 安装 Kali Linux 所有工具 ${NORMAL}"
     echo -e "${MENU}**${NUMBER} 3)${MENU} 安装 Kali Linux 取证工具 ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 4)${MENU} 安装 Kali Linux 完整系统 ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 4)${MENU} 安装 Kali Linux 默认系统 ${NORMAL}"
     echo -e "${MENU}**${NUMBER} 5)${MENU} 安装 Kali Linux GPU工具 ${NORMAL}"
     echo -e "${MENU}**${NUMBER} 6)${MENU} 安装 Kali Linux Nethunter工具 ${NORMAL}"
     echo -e "${MENU}**${NUMBER} 7)${MENU} 安装 Kali Linux 密码破解工具 ${NORMAL}"
@@ -33,8 +33,8 @@ show_menu_kali(){
 	    	安装 $i
 	    	break
 	    else
-	    	echo -e "\n错误的选项，请重试. $((3-$COUNTER)) chances left..)"
-
+	    	echo -e "\n错误的选项，请重试. 错误$((3-$COUNTER)) 次后退出..)"
+	    	
 	    fi
 	    let COUNTER=COUNTER+1 
 	done
@@ -51,7 +51,7 @@ function install(){
 	apt-get -f install -y  --allow-unauthenticated
 	apt-get install linux-headers-4.14.0-kali3-amd64 -y -y
     clear
-	echo -e "\n\n 安装成功!!!"
+	echo -e "\n\n 安装完成!!!"
     chmod +x ./files/vnc
     ./files/vnc
     break

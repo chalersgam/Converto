@@ -15,7 +15,7 @@ function main(){
 	printf "${WHITE}"
 	echo -e "----------------核心脚本作者:- Kunal dawar && Ayush Sahay---------------------"
 	echo -e "_______________________________________________________________________________"
-	echo -e "                   在VPS上安装Kali或Parrot"
+	echo -e "                   在VPS上自动安装Kali或Parrot"
 	echo -e "           1. Yes"
 	echo -e ""
 	echo -e "           2. No"
@@ -46,7 +46,7 @@ function main(){
 				break
 			fi
 		elif (($i == 2)); then 	
-				echo "再见！你什么都没选择。"
+				echo "最后祝你身体健康，再见！"
 				break
 		elif (($i == note)); then
 			echo -e "\n*****************************************************************"
@@ -55,7 +55,7 @@ function main(){
 			echo "3. Ubuntu系统只支持RDP选项（关于图形化界面的安装）"
 			echo "*******************************************************************"
 		else
-			echo -e "\n\n错误的选项!!!  $((3-$COUNTER)) chances left.."
+			echo -e "\n\n错误的选项!!!  错误$((3-$COUNTER)) 次后退出.."
 		fi
 		let COUNTER=COUNTER+1
 done

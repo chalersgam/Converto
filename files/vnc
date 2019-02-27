@@ -1,9 +1,9 @@
 #!/bin/bash
 apt-get update && sudo apt-get upgrade
-echo -e "\nDo you want to install VNC?"
-echo -e "\n1. Yes, Install VNC (Graphical)"
-echo "2. Yes,Install VNC (Non-Graphical)"
-echo "3. No, Do not install VNC"
+echo -e "\n你想安装VNC?"
+echo -e "\n1. 是的， 安装VNC (图形化)"
+echo "2. 是的， 安装VNC (非图形化)"
+echo "3. 不，不安装VNC"
 while :
 do
   read INPUT_STRING
@@ -32,8 +32,8 @@ do
 		vncserver
 		su
 		clear
-		echo "VNC SEVER STARTED ON PORT :1"
-		echo "Connect it!!! Example :- ipaddress:1 in VNC Viewer"
+		echo "VNC已开启，端口 :1"
+		echo "链接它!!! 例如 :- 192.168.1.1:1 "
 		break
 		;;
 	2)	
@@ -47,12 +47,12 @@ do
 		vncserver
 		su
 		clear
-		echo "VNC SEVER STARTED ON PORT :1"
-		echo "Connect it!!! Example :- ipaddress:1 in VNC Viewer"
+		echo "VNC已开启，端口 :1"
+		echo "链接它!!! 例如 :- 192.168.1.1:1"
 		break
 		;;
 	3)
-		echo "Bye Bye"
+		echo "最后祝你身体健康，再见！"
 		break
 		;;
  esac
